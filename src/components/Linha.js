@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { getMovies } from "../api";
+import{ getMovies } from "../api";
 
-function Linha(path, title){
+function Linha({path, title}){
     const [filmes, setFilmes] = useState([])
     const fetchFilmes = async (_path) => {
         try {
             const data = await getMovies(_path)
-            console.log(data.results)
             setFilmes(data.results)
         } catch (e) {
             console.log("FetchFilmes erro: " + e)
         }
     }
-
+    console.log(filmes)
     useEffect(() => {
         fetchFilmes(path)
     },[path])
 
     return(
-        <div>Nada</div>
+        <div>
+            <h1>{title}</h1>
+            <div>
+                <ul>
+                {filmes.map((c, index) =>(
+                    <li><img src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/></li>
+                ))}
+                </ul>
+            </div>
+        </div>
     )
 }
 
