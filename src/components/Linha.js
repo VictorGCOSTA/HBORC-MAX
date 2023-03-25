@@ -19,11 +19,16 @@ function Linha({path, title}){
 
     return(
         <div className="linhaFilmesLista">
-            <h2>{title}</h2>
+            <h2 className="title">{title}</h2>
             <div className="linha-cards">
-                {filmes.map((c, index) =>(
-                    <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
-                ))}
+                {filmes.map((c, index) => {
+                    if (title === 'Em alta'){
+                        return <img className="imagemFilme-large" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                    }else{
+                        return <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                    }
+                    
+                })}
             </div>
         </div>
     )
