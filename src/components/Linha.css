@@ -1,5 +1,22 @@
 .linhaFilmesItens{
-    list-style: none;
-    display: inline;
-    
+    margin-left: 20px;
+}
+
+.linha-cards{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.imagemFilme{
+    width: 100%;
+    max-height: 100px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    transition: transform 450ms;
+}
+
+.imagemFilme:hover{
+    transform: scale(1.08);
 }

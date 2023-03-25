@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import{ getMovies } from "../api";
-// import './Linha.css';
+import './Linha.css';
 
 function Linha({path, title}){
     const [filmes, setFilmes] = useState([])
@@ -18,14 +18,12 @@ function Linha({path, title}){
     },[path])
 
     return(
-        <div>
-            <h1>{title}</h1>
-            <div>
-                <ul className="linhaFilmesLista">
+        <div className="linhaFilmesLista">
+            <h2>{title}</h2>
+            <div className="linha-cards">
                 {filmes.map((c, index) =>(
-                    <li className="linhaFilmesItens"><img src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/></li>
+                    <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
                 ))}
-                </ul>
             </div>
         </div>
     )
