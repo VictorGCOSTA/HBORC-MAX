@@ -45,4 +45,26 @@
     font-weight: 900;
     padding-right: 20px;
 }
+.registrarButton{
+    position: absolute;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    bottom: 7px;
+    right: 10%;
+    height: 30px;
+    width: 120px;
+}
+.registrarButton:hover{
+    background-color: lightgray;
+    color: black;
+    transition: 0.2s;
+}
+.registrarButton:active{
+    transition: 0.1s;
+    background-color: black;
+    color: white;
+}
 

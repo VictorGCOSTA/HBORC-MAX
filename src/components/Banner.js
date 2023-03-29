@@ -26,6 +26,9 @@ function Banner(){
                 <h1 className="banner-title">
                     {movie.title || movie.name || movie.original_name}
                 </h1>
+                <div>
+                    {movie.overview}
+                </div>
                 <div className="btn-container">
                     <div className="banner-btn">Assistir</div>
                     <div className="banner-btn">Minha lista</div>

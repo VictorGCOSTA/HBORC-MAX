@@ -1,8 +1,8 @@
-import CATEGORIAS from './api';
+import CATEGORIAS from '../api';
 import './App.css';
-import Linha from './components/Linha';
-import Banner from './components/Banner';
-import Header from './components/Header';
+import Linha from '../components/Linha';
+import Banner from '../components/Banner';
+import Header from '../components/Header';
 
 function App() {
 

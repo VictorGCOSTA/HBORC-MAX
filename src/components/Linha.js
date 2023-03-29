@@ -23,9 +23,17 @@ function Linha({path, title}){
             <div className="linha-cards">
                 {filmes.map((c, index) => {
                     if (title === 'Em alta'){
-                        return <img className="imagemFilme-large" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                        return(
+                            <>
+                                <img className="imagemFilme-large" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                            </>
+                        ) 
                     }else{
-                        return <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                        return(
+                            <>
+                            <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                            </>
+                        )
                     }
                     
                 })}
