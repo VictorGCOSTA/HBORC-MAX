@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Login_Register.css';
 
 const Login = () => {
 
@@ -19,10 +20,11 @@ const Login = () => {
     }
     return(
         <div>
-            <div>
-                <h1>Entrar</h1>
+            <div className="container-login" >        
                 <form>
+                    <h1 className="entrar">Entrar</h1>
                     <input
+                        className="input"
                         type="email"
                         placeholder="Insira o seu email"
                         onChange={(e) => {
@@ -35,6 +37,7 @@ const Login = () => {
                     />
                     <br/>
                     <input
+                        className="input"
                         type="password"
                         placeholder="Insira a sua senha"
                         onChange={(e) => {
@@ -45,17 +48,23 @@ const Login = () => {
                         }}
                     />
                     <br/>
-                    <button onClick={() =>{
+                    <button
+                    className="buttonPage"
+                    onClick={() =>{
                         console.log(info)
                     }}>
                         Login
                     </button>
 
-                    <button onClick={(changeRouteRegister)}>
+                    <button
+                    className="buttonPage"
+                    onClick={(changeRouteRegister)}>
                         Registrar
                     </button>
 
-                    <button onClick={(changeRoute)}>
+                    <button
+                    className="buttonPage"
+                    onClick={(changeRoute)}>
                         Voltar
                     </button>
 

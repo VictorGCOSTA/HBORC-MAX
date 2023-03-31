@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+}
+.buttonPage{
+    position: relative;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    padding: 10px;
+    margin-inline: 10px;
+}
+.buttonPage:hover{
+    background-color: lightgray;
+    color: black;
+    transition: 0.2s;
+}
+.buttonPage:active{
+    transition: 0.1s;
+    background-color: black;
+    color: white;
+}
+.container-login{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 30px;
+    margin-inline: 30%;
+    margin-top: 15%;
+    border-radius: 10px;
+}
+.container-registro{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 30px;
+    margin-inline: 27%;
+    margin-top: 13%;
+    border-radius: 10px;
+}
+.input{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: solid white 2px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-style: none;
+    caret-color: white;
+    color: white;
+}
+.input-registro{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: solid white 2px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-style: none;
+    caret-color: white;
+    color: white;
+}
+.entrar{
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}

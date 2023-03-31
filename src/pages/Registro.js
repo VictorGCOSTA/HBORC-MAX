@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Login_Register.css';
 
 const Registro = () => {
 
@@ -16,10 +17,12 @@ const Registro = () => {
     }
     return(
         <div>
-            <div>
-                <h1>Registre-se</h1>
+            <div className="container-registro">
+                
                 <form>
+                <h1 className="entrar" >Registre-se</h1>
                     <input
+                        className="input-registro"
                         type="email"
                         placeholder="Insira o seu email"
                         onChange={(e) => {
@@ -32,6 +35,7 @@ const Registro = () => {
                     />
                     <br/>
                     <input
+                        className="input-registro"
                         type="password"
                         placeholder="Insira a sua senha"
                         onChange={(e) => {
@@ -43,6 +47,7 @@ const Registro = () => {
                     />
                     <br/>
                     <input
+                        className="input-registro"
                         type="username"
                         placeholder="Insira o seu nome de usuário"
                         onChange={(e) => {
@@ -53,13 +58,14 @@ const Registro = () => {
                         }}
                     />
                     <br/>
-                    <button onClick={() =>{
+                    <button className="buttonPage" onClick={() =>{
                         console.log(infoRegistro)
+
                     }}>
                         Registrar
                     </button>
 
-                    <button onClick={(changeRoute)}>
+                    <button className="buttonPage" onClick={(changeRoute)}>
                         Voltar
                     </button>
 

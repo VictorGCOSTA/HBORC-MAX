@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import{ getMovies } from "../api";
+import { useNavigate } from "react-router-dom";
 import './Linha.css';
+
 
 function Linha({path, title}){
     const [filmes, setFilmes] = useState([])
@@ -16,6 +18,11 @@ function Linha({path, title}){
     useEffect(() => {
         fetchFilmes(path)
     },[path])
+    let navegar = useNavigate();
+    const changeRoute = () => {
+        let path = `/movies`;
+        navegar(path);
+    }
 
     return(
         <div className="linhaFilmesLista">
@@ -25,13 +32,23 @@ function Linha({path, title}){
                     if (title === 'Em alta'){
                         return(
                             <>
-                                <img className="imagemFilme-large" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                                <button className="imagemFilme-large" onClick={() => {
+                                    changeRoute()
+                                    
+                                }} info={c.id}>
+                                    <img src={`https://image.tmdb.org/t/p/w200${c.poster_path}`} alt=""/>
+                                </button>
                             </>
                         ) 
                     }else{
                         return(
                             <>
-                            <img className="imagemFilme" src={`https://image.tmdb.org/t/p/w300${c.poster_path}`} alt=""/>
+                            <button className="imagemFilme" onClick={() => {
+                                    changeRoute()
+                                    
+                                }} info={c.id}>
+                                    <img src={`https://image.tmdb.org/t/p/w154${c.poster_path}`} alt=""/>
+                                </button>
                             </>
                         )
                     }
